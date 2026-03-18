@@ -68,9 +68,6 @@ fem-gravity/
 │   └── visualization/
 │
 ├── experiments/
-│   ├── experiment_1_single_mass.py
-│   ├── experiment_2_two_masses.py
-│   └── convergence.py
 │
 ├── results/
 │   ├── plots/
