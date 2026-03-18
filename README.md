@@ -54,17 +54,43 @@ FEM is widely used in:
 ## Project Structure (EXPERIMENTAL)
 
 ```text
-/root
-│── /docs # Theoretical Explanations and Examples
-│── /experiments # Experimental environment
-│── /src
-    │── mesh/ # Mesh generation and handling
-    │── fem/ # FEM implementation (basis functions, assembly, solver)
-    │── physics/ # Poisson equation & gravitational model
-    │── visualization/ # Plotting results (2D fields)
-    │── main.py # Entry point
-    │── README.md
+fem-gravity/
+│
+├── README.md
+├── docs/
+│   └── theory.md
+│
+├── src/
+│   ├── mesh/
+│   ├── fem/
+│   ├── solver/
+│   ├── physics/
+│   └── visualization/
+│
+├── experiments/
+│   ├── experiment_1_single_mass.py
+│   ├── experiment_2_two_masses.py
+│   └── convergence.py
+│
+├── results/
+│   ├── plots/
+│   └── data/
+│
+└── requirements.txt
 ```
+
+### Overview
+
+- [docs/](docs/) – Contains theoretical background and explanations (e.g. FEM derivation, Poisson equation, small illustrative examples).
+- [src/](src/) – Core implementation of the project:
+- [src/mesh/](src/mesh/) – Mesh generation and domain discretization
+- [src/fem/](src/fem/) – Finite Element Method logic (basis functions, element computations)
+- [src/solver/](src/solver/) – Assembly of the global system and linear solver
+- [src/physics/](src/physics/) – Problem definition (mass density, constants, equations)
+- [src/visualization/](src/visualization/) – Plotting and rendering of results
+- [experiments/](experiments/) – Runnable scripts for testing different scenarios (e.g. single mass, multiple masses, convergence studies).
+- [results/](results/) – Stores generated outputs such as plots and numerical data.
+- [requirements.txt](requirements.txt) – Lists all required Python dependencies.
 
 ---
 
